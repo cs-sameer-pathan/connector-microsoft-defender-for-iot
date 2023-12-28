@@ -59,7 +59,6 @@ class DefenderForIoT:
                 raise ConnectorError(error_response)
             else:
                 logger.error(response.json())
-                # raise ConnectorError(str(response.json()))
         except requests.exceptions.SSLError:
             raise ConnectorError('SSL certificate validation failed')
         except requests.exceptions.ConnectTimeout:
