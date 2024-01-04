@@ -502,48 +502,6 @@
         ]
       },
       "parameters": []
-    },
-    {
-      "operation": "list_device_connections",
-      "title": "Get Device Connections",
-      "description": "Retrieves a list of device connections based on input parameters specified.",
-      "category": "investigation",
-      "annotation": "list_device_connections",
-      "visible": false,
-      "enabled": true,
-      "output_schema": {},
-      "parameters": [
-        {
-          "title": "Discovered After",
-          "name": "discoveredAfter",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "type": "datetime",
-          "tooltip": "Specify the datetime to retrieve device connections detected after specified time from Defender for IoT.",
-          "description": "(Optional) Specify the datetime to retrieve device connections detected after specified time from Defender for IoT."
-        },
-        {
-          "title": "Discovered Before",
-          "name": "discoveredBefore",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "type": "datetime",
-          "tooltip": "Specify the datetime to retrieve device connections detected before specified time from Defender for IoT.",
-          "description": "(Optional) Specify the datetime to retrieve device connections detected before specified time from Defender for IoT."
-        },
-        {
-          "title": "Active in Last x Minutes",
-          "name": "lastActiveInMinutes",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "type": "integer",
-          "tooltip": "Specify the time duration (in minutes) to retrieve device connections that were active within a specified timeframe, calculated backward from the current time.",
-          "description": "(Optional) Specify the time duration (in minutes) to retrieve device connections that were active within a specified timeframe, calculated backward from the current time."
-        }
-      ]
     }
   ]
 }
