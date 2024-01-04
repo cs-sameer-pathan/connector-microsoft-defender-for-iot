@@ -73,7 +73,81 @@ The output contains the following populated JSON schema:
 ]</pre>
 ### operation: Get Timeline Events
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Type</td><td>(Optional) Select the type of alerts to be retrieved from Defender for IoT.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Type</td><td>(Optional) Select the type of alerts to be retrieved from Defender for IoT.<br/>
+You can choose from following:<br/>
+<li>Address Update</li>
+<li>Alert Detected</li>
+<li>Alert Updated</li>
+<li>Back to Normal</li>
+<li>Cleartext Authentication</li>
+<li>Common ASCII Message Protocol Memory Write Operation</li>
+<li>Configuration Of Cleartext Password</li>
+<li>Controller Program Delete</li>
+<li>Controller Program Reset</li>
+<li>Controller Reset</li>
+<li>Controller Start</li>
+<li>Controller Stop</li>
+<li>Data Intelligence Package Installation Failure</li>
+<li>Data Intelligence Package Uploaded</li>
+<li>Database Structure Manipulation</li>
+<li>DeltaV Install Script</li>
+<li>Device Connection Detected</li>
+<li>Device Deleted</li>
+<li>Device Detected</li>
+<li>Device Updated</li>
+<li>Event Detected and Muted</li>
+<li>Exclusion Rule Created</li>
+<li>Exclusion Rule Removed</li>
+<li>Exclusion Rule Updated</li>
+<li>FTP Authentication Failure</li>
+<li>File Transfer Detected</li>
+<li>Firmware Update</li>
+<li>HTTP Basic Authentication</li>
+<li>Inactive Devices Scheduled for deletion</li>
+<li>Internet Access</li>
+<li>MMS Memory Block Operation</li>
+<li>MMS Program Operation</li>
+<li>Notification was resolved manually</li>
+<li>OPC AE Event</li>
+<li>OPC AE Event Condition Management Operation</li>
+<li>OPC AE Event Subscription</li>
+<li>OPC Data Access Group Management Operation</li>
+<li>OPC Data Access IO Subscription Management Operation</li>
+<li>OPC Data Access Item Management Operation</li>
+<li>PLC Change access level</li>
+<li>PLC Change access level failed</li>
+<li>PLC Configuration Read</li>
+<li>PLC Configuration Write</li>
+<li>PLC Firmware Changed</li>
+<li>PLC Mode Change</li>
+<li>PLC Module Change</li>
+<li>PLC Operating Mode Change Detected</li>
+<li>PLC Password Change</li>
+<li>PLC Program Update</li>
+<li>PLC Program Upload</li>
+<li>PLC Programming</li>
+<li>PLC Programming Mode Set</li>
+<li>PLC Reset</li>
+<li>PLC Start</li>
+<li>Profinet SET operation</li>
+<li>Remote Access Connection Established</li>
+<li>Remote Process Execution</li>
+<li>Report Created</li>
+<li>SCL Uploaded</li>
+<li>SNMP Trap detected</li>
+<li>Scan Device Detected</li>
+<li>Siemens S7 Authentication</li>
+<li>Siemens S7 Memory Block Operation</li>
+<li>Syslog Message</li>
+<li>Telnet Authentication Failure</li>
+<li>User Defined Event</li>
+<li>User Defined Rule Created</li>
+<li>User Defined Rule Deleted</li>
+<li>User Defined Rule Edited</li>
+<li>User Defined Rule Operation</li>
+<li>User Login Attempt</li>
+<li>User Operation</li>
+<li>Wonderware session initialized</li>
 </td></tr><tr><td>Reported in Last x Minutes</td><td>(Optional) Specify the time duration (in minutes) to retrieve events reported within a given timeframe, calculated backward from the current time.
 </td></tr></tbody></table>
 
