@@ -27,7 +27,7 @@ For the procedure to configure a connector, click [here](https://docs.fortinet.c
 <p>In FortiSOAR&trade;, on the Connectors page, click the <strong>Microsoft Defender for IoT</strong> connector row (if you are in the <strong>Grid</strong> view on the Connectors page) and in the <strong>Configurations</strong> tab enter the required configuration details:</p>
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Server URL</td><td>IP address or hostname of the Microsoft Defender for IoT server to which you will connect and perform automated operations.
 </td>
-</tr><tr><td>Access Token</td><td>Specify the access token for authentication with Microsoft Defender for IoT.
+</tr><tr><td>Access Token</td><td>Specify the access token for authentication with Microsoft Defender for IoT. For more information, see <a href="https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/references-work-with-defender-for-iot-apis#generate-an-api-access-token">https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/references-work-with-defender-for-iot-apis#generate-an-api-access-token</a>
 </td>
 </tr><tr><td>Verify SSL</td><td>Specifies whether the SSL certificate for the server is to be verified or not. <br/>By default, this option is set to True.</td></tr>
 </tbody></table>
@@ -36,9 +36,9 @@ For the procedure to configure a connector, click [here](https://docs.fortinet.c
 The following automated operations can be included in playbooks and you can also use the annotations to access operations:
 <table border=1><thead><tr><th>Function</th><th>Description</th><th>Annotation and Category</th></tr></thead><tbody><tr><td>Get Alert List</td><td>Retrieves a list of alerts that Defender for IoT sensor has detected based on input parameters specified.</td><td>list_alerts <br/>Investigation</td></tr>
 <tr><td>Get Timeline Events</td><td>Retrieves a list of events reported to the event timeline.</td><td>list_timeline_events <br/>Investigation</td></tr>
-<tr><td>Get Device List</td><td>Retrieves a list of devices detected by this sensor based on input parameter specified.</td><td>list_devices <br/>Investigation</td></tr>
+<tr><td>Get Device List</td><td>Retrieves a list of devices detected by the sensor based on input parameter specified.</td><td>list_devices <br/>Investigation</td></tr>
 <tr><td>Get Device CVEs List</td><td>Retrieves a list of all known CVEs discovered on devices in the network, sorted by descending CVE score.</td><td>list_device_cves <br/>Investigation</td></tr>
-<tr><td>Get Device Vulnerability Information</td><td>Retrieves  a general vulnerability assessment report. This assessment provides insight into your system's security level.</td><td>get_device_vulnerability_report <br/>Investigation</td></tr>
+<tr><td>Get Device Vulnerability Information</td><td>Retrieves vulnerability assessment results for each device.</td><td>get_device_vulnerability_report <br/>Investigation</td></tr>
 <tr><td>Get Security Vulnerabilities</td><td>Retrieves general vulnerability assessment report. This assessment provides insight into your system's security level.</td><td>get_vulnerability_assessment_report <br/>Investigation</td></tr>
 <tr><td>Get Operational Vulnerabilities</td><td>Retrieves operational vulnerability assessment report. This assessment provides insight into the operational status of your network. It's based on general network and system information and not on a specific device evaluation.</td><td>get_operational_assessment_report <br/>Investigation</td></tr>
 <tr><td>Get Mitigation Steps</td><td>Retrieves a mitigation assessment. This assessment provides recommended steps for mitigating detected vulnerabilities. It's based on general network and system information and not on a specific device evaluation.</td><td>get_mitigation_assessment <br/>Investigation</td></tr>
@@ -166,7 +166,7 @@ The output contains the following populated JSON schema:
 ]</pre>
 ### operation: Get Device List
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Authorized</td><td>(Optional) Specify whether you want to retrieve authorized or unauthorized devices detected by this sensor. You can choose from True or False.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Authorized</td><td>(Optional) Specify whether you want to retrieve authorized or unauthorized devices detected by the sensor. You can choose from True or False.
 </td></tr></tbody></table>
 
 #### Output

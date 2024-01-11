@@ -21,7 +21,7 @@
         "visible": true,
         "value": "",
         "tooltip": "IP address or hostname of the Microsoft Defender for IoT server to which you will connect and perform automated operations.",
-        "description": "IP address or hostname of the Microsoft Defender for IoT server to which you will connect and perform automated operations."
+        "description": "IP address or hostname of the Microsoft Defender for IoT server to which you will connect and perform automated operations. "
       },
       {
         "title": "Access Token",
@@ -31,7 +31,7 @@
         "editable": true,
         "visible": true,
         "tooltip": "Specify the access token for authentication with Microsoft Defender for IoT.",
-        "description": "Specify the access token for authentication with Microsoft Defender for IoT."
+        "description": "Specify the access token for authentication with Microsoft Defender for IoT. For more information, see https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/references-work-with-defender-for-iot-apis#generate-an-api-access-token"
       },
       {
         "title": "Verify SSL",
@@ -238,7 +238,7 @@
     {
       "operation": "list_devices",
       "title": "Get Device List",
-      "description": "Retrieves a list of devices detected by this sensor based on input parameter specified.",
+      "description": "Retrieves a list of devices detected by the sensor based on input parameter specified.",
       "category": "investigation",
       "annotation": "list_devices",
       "enabled": true,
@@ -251,8 +251,8 @@
           "required": false,
           "editable": true,
           "type": "select",
-          "tooltip": "Specify whether you want to retrieve authorized or unauthorized devices which is detected by this sensor.",
-          "description": "(Optional) Specify whether you want to retrieve authorized or unauthorized devices which is detected by this sensor.\nYou can choose from True, False.",
+          "tooltip": "Specify whether you want to retrieve authorized or unauthorized devices which is detected by the sensor.",
+          "description": "(Optional) Specify whether you want to retrieve authorized or unauthorized devices which is detected by the sensor.\nYou can choose from True, False.",
           "options": [
             "True",
             "False"
@@ -303,7 +303,7 @@
     {
       "operation": "get_device_vulnerability_report",
       "title": "Get Device Vulnerability Information",
-      "description": "Retrieves  a general vulnerability assessment report. This assessment provides insight into your system's security level.",
+      "description": "Retrieves vulnerability assessment results for each device.",
       "category": "investigation",
       "annotation": "get_device_vulnerability_report",
       "enabled": true,
