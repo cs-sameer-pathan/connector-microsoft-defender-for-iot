@@ -9,7 +9,7 @@
   "category": "OT & IoT Security ",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
-  "help_online": "",
+  "help_online": "https://github.com/fortinet-fortisoar/connector-microsoft-defender-for-iot/blob/release/1.0.0/docs/MicrosoftDefenderForIOTDoc.md",
   "configuration": {
     "fields": [
       {
@@ -21,7 +21,7 @@
         "visible": true,
         "value": "",
         "tooltip": "IP address or hostname of the Microsoft Defender for IoT server to which you will connect and perform automated operations.",
-        "description": "IP address or hostname of the Microsoft Defender for IoT server to which you will connect and perform automated operations."
+        "description": "IP address or hostname of the Microsoft Defender for IoT server to which you will connect and perform automated operations. "
       },
       {
         "title": "Access Token",
@@ -31,7 +31,7 @@
         "editable": true,
         "visible": true,
         "tooltip": "Specify the access token for authentication with Microsoft Defender for IoT.",
-        "description": "Specify the access token for authentication with Microsoft Defender for IoT."
+        "description": "Specify the access token for authentication with Microsoft Defender for IoT. For more information, see https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/references-work-with-defender-for-iot-apis#generate-an-api-access-token"
       },
       {
         "title": "Verify SSL",
@@ -220,11 +220,10 @@
             "User Operation",
             "Wonderware session initialized"
           ],
-          "tooltip": "Select type of alerts which is to be retrieved from Defender for IoT.",
-          "description": "(Optional) Select type of alerts which is to be retrieved from Defender for IoT.\nYou can choose from Address Update, Alert Detected, Alert Updated, Back to Normal, Cleartext Authentication, Common ASCII Message Protocol Memory Write Operation, Configuration Of Cleartext Password, Controller Program Delete, Controller Program Reset, Controller Reset, Controller Start, Controller Stop, Data Intelligence Package Installation Failure, Data Intelligence Package Uploaded, Database Structure Manipulation, DeltaV Install Script, Device Connection Detected, Device Deleted, Device Detected, Device Updated, Event Detected and Muted, Exclusion Rule Created, Exclusion Rule Removed, Exclusion Rule Updated, FTP Authentication Failure, File Transfer Detected, Firmware Update, HTTP Basic Authentication, Inactive Devices Scheduled for deletion, Internet Access, MMS Memory Block Operation, MMS Program Operation, Notification was resolved manually, OPC AE Event, OPC AE Event Condition Management Operation, OPC AE Event Subscription, OPC Data Access Group Management Operation, OPC Data Access IO Subscription Management Operation, OPC Data Access Item Management Operation, PLC Change access level, PLC Change access level failed, PLC Configuration Read, PLC Configuration Write, PLC Firmware Changed, PLC Mode Change, PLC Module Change, PLC Operating Mode Change Detected, PLC Password Change, PLC Program Update, PLC Program Upload, PLC Programming, PLC Programming Mode Set, PLC Reset, PLC Start, Profinet SET operation, Remote Access Connection Established, Remote Process Execution, Report Created, SCL Uploaded, SNMP Trap detected, Scan Device Detected, Siemens S7 Authentication, Siemens S7 Memory Block Operation, Syslog Message, Telnet Authentication Failure, User Defined Event, User Defined Rule Created, User Defined Rule Deleted, User Defined Rule Edited, User Defined Rule Operation, User Login Attempt, User Operation, Wonderware session initialized."
+          "tooltip": "Select the type of alerts to be retrieved from Defender for IoT",
+          "description": "(Optional) Select the type of alerts to be retrieved from Defender for IoT.\nYou can choose from Address Update, Alert Detected, Alert Updated, Back to Normal, Cleartext Authentication, Common ASCII Message Protocol Memory Write Operation, Configuration Of Cleartext Password, Controller Program Delete, Controller Program Reset, Controller Reset, Controller Start, Controller Stop, Data Intelligence Package Installation Failure, Data Intelligence Package Uploaded, Database Structure Manipulation, DeltaV Install Script, Device Connection Detected, Device Deleted, Device Detected, Device Updated, Event Detected and Muted, Exclusion Rule Created, Exclusion Rule Removed, Exclusion Rule Updated, FTP Authentication Failure, File Transfer Detected, Firmware Update, HTTP Basic Authentication, Inactive Devices Scheduled for deletion, Internet Access, MMS Memory Block Operation, MMS Program Operation, Notification was resolved manually, OPC AE Event, OPC AE Event Condition Management Operation, OPC AE Event Subscription, OPC Data Access Group Management Operation, OPC Data Access IO Subscription Management Operation, OPC Data Access Item Management Operation, PLC Change access level, PLC Change access level failed, PLC Configuration Read, PLC Configuration Write, PLC Firmware Changed, PLC Mode Change, PLC Module Change, PLC Operating Mode Change Detected, PLC Password Change, PLC Program Update, PLC Program Upload, PLC Programming, PLC Programming Mode Set, PLC Reset, PLC Start, Profinet SET operation, Remote Access Connection Established, Remote Process Execution, Report Created, SCL Uploaded, SNMP Trap detected, Scan Device Detected, Siemens S7 Authentication, Siemens S7 Memory Block Operation, Syslog Message, Telnet Authentication Failure, User Defined Event, User Defined Rule Created, User Defined Rule Deleted, User Defined Rule Edited, User Defined Rule Operation, User Login Attempt, User Operation, Wonderware session initialized."
         },
         {
-          "title1": "Time Frame",
           "title": "Reported in Last x Minutes",
           "name": "minutesTimeFrame",
           "visible": true,
@@ -239,7 +238,7 @@
     {
       "operation": "list_devices",
       "title": "Get Device List",
-      "description": "Retrieves a list of devices detected by this sensor based on input parameter specified.",
+      "description": "Retrieves a list of devices detected by the sensor based on input parameter specified.",
       "category": "investigation",
       "annotation": "list_devices",
       "enabled": true,
@@ -252,8 +251,8 @@
           "required": false,
           "editable": true,
           "type": "select",
-          "tooltip": "Specify whether you want to retrieve authorized or unauthorized devices which is detected by this sensor.",
-          "description": "(Optional) Specify whether you want to retrieve authorized or unauthorized devices which is detected by this sensor.\nYou can choose from True, False.",
+          "tooltip": "Specify whether you want to retrieve authorized or unauthorized devices which is detected by the sensor.",
+          "description": "(Optional) Specify whether you want to retrieve authorized or unauthorized devices which is detected by the sensor.\nYou can choose from True, False.",
           "options": [
             "True",
             "False"
@@ -304,7 +303,7 @@
     {
       "operation": "get_device_vulnerability_report",
       "title": "Get Device Vulnerability Information",
-      "description": "Retrieves  a general vulnerability assessment report. This assessment provides insight into your system's security level.",
+      "description": "Retrieves vulnerability assessment results for each device.",
       "category": "investigation",
       "annotation": "get_device_vulnerability_report",
       "enabled": true,
@@ -503,48 +502,6 @@
         ]
       },
       "parameters": []
-    },
-    {
-      "operation": "list_device_connections",
-      "title": "Get Device Connections",
-      "description": "Retrieves a list of device connections based on input parameters specified.",
-      "category": "investigation",
-      "annotation": "list_device_connections",
-      "visible": false,
-      "enabled": true,
-      "output_schema": {},
-      "parameters": [
-        {
-          "title": "Discovered After",
-          "name": "discoveredAfter",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "type": "datetime",
-          "tooltip": "Specify the datetime to retrieve device connections detected after specified time from Defender for IoT.",
-          "description": "(Optional) Specify the datetime to retrieve device connections detected after specified time from Defender for IoT."
-        },
-        {
-          "title": "Discovered Before",
-          "name": "discoveredBefore",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "type": "datetime",
-          "tooltip": "Specify the datetime to retrieve device connections detected before specified time from Defender for IoT.",
-          "description": "(Optional) Specify the datetime to retrieve device connections detected before specified time from Defender for IoT."
-        },
-        {
-          "title": "Active in Last x Minutes",
-          "name": "lastActiveInMinutes",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "type": "integer",
-          "tooltip": "Specify the time duration (in minutes) to retrieve device connections that were active within a specified timeframe, calculated backward from the current time.",
-          "description": "(Optional) Specify the time duration (in minutes) to retrieve device connections that were active within a specified timeframe, calculated backward from the current time."
-        }
-      ]
     }
   ]
 }
